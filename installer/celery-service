@@ -1,0 +1,11 @@
+
+[Unit]
+Description=django daemon
+After=network.target
+
+[Service]
+#User=root
+#Group=root
+WorkingDirectory=/opt/www/Kubernetes-REST-API-Adapter-v1.1/backend
+ExecStart=/opt/www/Kubernetes-REST-API-Adapter-v1.1/KubernetesRestApiAdapter-venv/bin/celery -A KubernetesRestApiAdapter worker -B -l info --scheduler django_celery_beat.schedulers:DatabaseScheduler
+EnvironmentFile=/opt/www/Kubernetes-REST-API-Adapter-v1.1/celeryenv

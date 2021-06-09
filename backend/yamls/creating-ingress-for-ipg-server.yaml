@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  # Example for ingress name/id: i-inyt7890jk
+  # Example for namespace name/id: n-hyujk678u4
+  name: i-<deployment-id>
+  namespace: n-<namespace-id>
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    nginx.org/mergeable-ingress-type: "minion"
+    # Example for service name/id: s-inyt7890jk
+    nginx.org/rewrites: "serviceName=s-<deployment-id> rewrite=/"
+spec:
+  rules:
+    # Example for ipg server domain name: d-inyt7890jk
+    - host: d-<deployment-id>.karel.cloud
+      http:
+        paths:
+          - path: /
+            backend:
+              # Example for ipg server service name/id: s-inyt7890jk
+              serviceName: s-<deployment-id>
+              servicePort: 8088

@@ -1,0 +1,43 @@
+{
+ "subscriptions": [
+  {
+   "customer": "Customer 200",
+   "start_date": "2020-08-07",
+   "end_date": "2020-08-27",
+   "term_subscription": false,
+   "service_type": "IPG",
+   "subscription": 253,
+   "service_data": {
+    "server_name_prefix": "dsdsdsd",
+    "package": 5,
+    "trunk_service_provider": 1,
+    "extra_call_record_package": 4,
+    "demo": false,
+    "extra_duration_package": 5,
+    "exp20_dss_module_ip1141": 0,
+    "exp40_dss_module_ip136_ip138": 0,
+    "ip1111_poe_no_adapter": 0,
+    "ip1131_poe_gigabit_no_adapter": 0,
+    "ip1141_poe_no_adapter": 0,
+    "ip1141_ip131_ip132_adapter": 0,
+    "ip1181_ip136_ip138_adapter": 0,
+    "ip1211_w_adapter": 0,
+    "ip1211_poe_no_adapter": 0,
+    "ip1211_ip1211p_ip1111_ip1131_adapter": 0,
+    "ip131_poe_no_adapter": 0,
+    "ip132_gigabit_no_adapter": 0,
+    "ip136_poe_no_adapter": 0,
+    "ip138_poe_no_adapter": 0,
+    "karel_mobile": 0,
+    "vp128": 0,
+    "yt510": 0,
+    "yt520": 0,
+    "yt530": 0,
+    "servers": [
+     "IpgServer",
+     "WebcmServer"
+    ]
+   }
+  }
+ ]
+}

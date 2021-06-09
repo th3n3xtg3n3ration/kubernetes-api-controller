@@ -1,0 +1,26 @@
+---
+apiVersion: projectcalico.org/v3
+kind: NetworkPolicy
+metadata:
+# Example for network policy name/id: np-hyujk678u4
+# Example for namespace name/id: n-hyujk678u4 
+  name: np-<namespace-id>
+  namespace: n-<namespace-id>
+spec:
+  selector: all()
+  types:
+  - Ingress
+  - Egress
+  ingress:
+  - action: Deny
+    source:
+# Example for network policy selector: n-hyujk678u4
+      namespaceSelector: name != 'n-<namespace-id>'
+  - action: Allow
+  egress:
+  - action: Deny
+    destination:
+# Example for network policy selector: n-hyujk678u4
+      namespaceSelector: name != 'n-<namespace-id>'
+  - action: Allow
+

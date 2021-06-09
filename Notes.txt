@@ -1,0 +1,65 @@
+
+
+--workers 3 --bind unix:/opt/www/Kubernetes-REST-API-Adapter-v1.1/kubercloud.sock KubernetesRestApiAdapter.wsgi:application
+
+
+{
+ "apiVersion": "apps/v1",
+ "kind": "Deployment",
+ "metadata": {
+  "name": "karel-deployment-1"
+ },
+ "spec": {
+  "selector": {
+   "matchLabels": {
+    "app": "karel-deployment-"
+   }
+  },
+  "replicas": 0,
+  "template": {
+   "metadata": {
+    "labels": {
+     "app": "karel-deployment-"
+    }
+   },
+   "spec": {
+    "containers": [
+     {
+      "name": "karel-deployment-1",
+      "image": "leonerath/website",
+      "imagePullPolicy": "Always",
+      "ports": [
+       {
+        "containerPort": 3000
+       }
+      ],
+      "resources": {
+       "limits": {
+        "memory": "600Mi",
+        "cpu": 1
+       },
+       "requests": {
+        "memory": "300Mi",
+        "cpu": "500m"
+       }
+      },
+      "volumeMounts": [
+       {
+        "name": "karel-master-data",
+        "mountPath": "/data"
+       }
+      ]
+     }
+    ],
+    "volumes": [
+     {
+      "name": "karel-master-data",
+      "persistentVolumeClaim": {
+       "claimName": "master-claim-"
+      }
+     }
+    ]
+   }
+  }
+ }
+}

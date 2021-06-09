@@ -1,0 +1,66 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  # Example for deployment name/id: ipg-d-inyt7890jk
+  name: ipg-d-<deployment-id>
+  # Example for namespace name/id:  n-hyujk678u4
+  namespace: n-<namespace-id>
+spec:
+  selector:
+    matchLabels:
+      # Example for label name/id: n-hyujk678u4
+      app: n-<namespace-id>
+  replicas: 1
+  template:
+    metadata:
+      annotations:
+        # Example for static ip adress from 10.234.0.0/18 - please assume this ip pool can be changed in the future. So, we can create static ip pool value and assign any pool to it not to struggle static ip pool change for each time. Let's suppose 10.235.0.0/17, 172.10.34.0/15 subnet e.g. However, we use 10.234.0.0/18 in Kubernetes cluster.
+        # Example for static ip address: 10.234.0.5. Warning! This static ip adress should be unique and changed in each deployment.
+        "cni.projectcalico.org/ipv4pools": '["karel-cloud-static-ip-pool"]'
+        "cni.projectcalico.org/ipAddrs": '["<static-ip-address>"]'
+      labels:
+        # Example for label name/id: n-hyujk678u4
+        app: n-<namespace-id>
+    spec:
+      initContainers:
+        # Example for initContainer name/id: ipg-init-d-inyt7890jk
+        - name: ipg-init-d-<deployment-id>
+          image: thenextgeneration/ipg-server:v4
+          command:
+            - "/bin/bash"
+            - "-c"
+            - "ls /karel_init/home || cp -rp /karel/* /karel_init"
+          securityContext:
+            privileged: true
+          resources:
+            limits:
+              memory: 2Gi
+              cpu: 1
+            requests:
+              memory: 1Gi
+              cpu: 500m
+          volumeMounts:
+            - name: karel-master-data
+              mountPath: "/karel_init"
+      containers:
+        # Example for container name/id: ipg-d-inyt7890jk
+        - name: ipg-d-<deployment-id>
+          image: thenextgeneration/ipg-server:v4
+          securityContext:
+            privileged: true
+          resources:
+            limits:
+              memory: 2Gi
+              cpu: 1
+            requests:
+              memory: 1Gi
+              cpu: 500m
+          volumeMounts:
+            - name: karel-master-data
+              mountPath: "/karel"
+      volumes:
+        - name: karel-master-data
+          persistentVolumeClaim:
+            # Example for pvc name/id: p-inyt7890jk
+            claimName: p-<deployment-id>

@@ -1,0 +1,55 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+# Example for service name/id: s-inyt7890jk
+# Exammple for namespace name/id: n-hyujk678u4
+  name: s-<deployment-id>
+  namespace: n-<namespace-id>
+  labels:
+# Example for label name/id: s-inyt7890jk
+    app: s-<deployment-id>
+spec:
+  selector:
+# Example for selector name/id: s-inyt7890jk
+    app: s-<deployment-id>
+  type: ClusterIP
+  ports:
+  - name: http
+    port: 8088
+    targetPort: 8088
+    protocol: TCP
+  - name: sip-secure
+    port: 5061
+    targetPort: 5061
+    protocol: TCP
+  - name: sip-unsecure
+    port: 5060
+    targetPort: 5060
+    protocol: UDP
+  - name: webcm
+    port: 24995
+    targetPort: 24995
+    protocol: TCP
+  - name: port-samba-1
+    port: 139
+    targetPort: 139
+    protocol: TCP
+  - name: port-samba-2
+    port: 445
+    targetPort: 445
+    protocol: TCP
+
+
+
+
+
+
+
+
+
+
+
+
+
+

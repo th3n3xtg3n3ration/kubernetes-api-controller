@@ -1,0 +1,9 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  #Example for namespace name/id: n-hyujk678u4
+  #Example for label name/id: n-hyujk678u4
+  name: n-<namespace-id>
+  labels:
+    name: n-<namespace-id>

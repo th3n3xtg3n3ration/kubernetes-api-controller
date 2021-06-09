@@ -1,0 +1,917 @@
+    1  ip a
+    2  ping 1.1.1.1
+    3  yum install -y open-vm-tools
+    4  ls /usr/bin/vmtoolsd 
+    5  reboot
+    6  ls /usr/bin/vmtoolsd 
+    7  ls -l /usr/bin/vmtoolsd 
+    8  vi /usr/bin/vmtoolsd 
+    9  shutoff -now
+   10  ls
+   11  yum remove -y open-vm-tools
+   12  yum install perl -y
+   13  mount /dev/cdrom /mnt
+   14  mount /dev/cdrom /mnt/
+   15  unmount /dev/cdrom /mnt/
+   16  umount /dev/cdrom /mnt/
+   17  umount /dev/cdrom /mnt
+   18  umount /dev/cdrom /mnt/
+   19  mount /dev/cdrom /mnt/
+   20  cd /mnt
+   21  ls
+   22  cp VMwareTools-10.3.21-14772444.tar.gz /tmp/
+   23  cd /tmp/
+   24  tar -zxvf VMwareTools-10.3.21-14772444.tar.gz 
+   25  ls
+   26  cd vmware-tools-distrib/
+   27  ls
+   28  ./vmware-install.pl 
+   29  reboot
+   30  exit
+   31  yum update -y
+   32  sudo visudo
+   33  ssh-keygen -t rsa
+   34  rm -rf /root/.ssh/
+   35  ip a
+   36  vim /etc/sysconfig/network-scripts/ifcfg-ens192
+   37  vi /etc/sysconfig/network-scripts/ifcfg-ens192
+   38  reboot
+   39  hostnamectl set-hostname kube-cloud-server.tr-ist-kube1.int.cloud.karel.com.tr
+   40  yum update -y
+   41  reboot -n
+   42  ip a
+   43  vim /etc/hosts
+   44  yum install vim -y
+   45  vim /etc/hosts
+   46  vim /etc/resolv.conf
+   47  vim /etc/sysconfig/network-scripts/ifcfg-ens192
+   48  reboot
+   49  sudo
+   50  sudo yum update
+   51  python
+   52  python3
+   53  yum install -y python3.7
+   54  yum install -y python3
+   55  cd /opt/
+   56  ll
+   57  ls
+   58  mkdir www
+   59  cd www
+   60  git clone https://github.com/th3n3xtg3n3ration/Kubernetes-REST-API-Adapter-v1.1.git
+   61  yum install -y git
+   62  sudo yum groupinstall 'Development Tools'
+   63  git
+   64  ll
+   65  cd /opt/www
+   66  ll
+   67  git clone https://github.com/th3n3xtg3n3ration/Kubernetes-REST-API-Adapter-v1.1.git
+   68  ll
+   69  cd Kubernetes-REST-API-Adapter-v1.1/
+   70  clear
+   71  python3 -m venv KubernetesRestApiAdapter-venv
+   72  source KubernetesRestApiAdapter-venv/bin/activate
+   73  pip install -r requirements.txt 
+   74  pip install --upgrade pip
+   75  vim requirements.txt 
+   76  pip install --upgrade pip
+   77  pip install -r requirements.txt 
+   78  yum install postgresql-libs
+   79  pip install -r requirements.txt 
+   80  pip install psycopg2-binary
+   81  ll
+   82  sudo vim /etc/yum.repos.d/CentOS-Base.repo
+   83  sudo yum install https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm
+   84  yum list postgresql*
+   85  sudo yum install postgresql12-server
+   86  sudo /usr/pgsql-12/bin/postgresql-12-setup initdb
+   87  sudo systemctl start postgresql-12
+   88  sudo systemctl enable postgresql-12
+   89  sudo -i -u postgres
+   90  ll
+   91  cd backend/
+   92  vim .env 
+   93  cd KubernetesRestApiAdapter/
+   94  cd settings/
+   95  vim local.py
+   96  cd ..
+   97  python manage.py  migrate
+   98  cd ..
+   99  git pull
+  100  cd backend/
+  101  ls
+  102  cat KubernetesRestApiAdapter/settings/local.py
+  103  vim KubernetesRestApiAdapter/settings/local.py
+  104  cat .env
+  105  python manage.py check
+  106  pip uninstall decouple
+  107  pip install python-decouple --upgrade
+  108  pip uninstall decouple
+  109  python manage.py check
+  110  pip install -r ../requirements.txt 
+  111  cat ../requirements.txt 
+  112  vim ../requirements.txt 
+  113  pip install -r ../requirements.txt 
+  114  vim ../requirements.txt 
+  115  pip install -r ../requirements.txt 
+  116  pip install django
+  117  python manage.py check
+  118  pip install djangorestframework
+  119  python manage.py check
+  120  git pull
+  121  cd ..
+  122  git pull
+  123  python manage.py check
+  124  cd ba
+  125  cd backend/
+  126  python manage.py check
+  127  git pull
+  128  cd ..
+  129  git pull
+  130  cd backend/
+  131  python manage.py check
+  132  python manage.py migrate
+  133  cd ..
+  134  git pull
+  135  cd backend/
+  136  clear
+  137  python manage.py check
+  138  vim KubernetesRestApiAdapter/settings/base.py 
+  139  git stash
+  140  git pull
+  141  cd ..
+  142  git pull
+  143  cd backend/
+  144  vim KubernetesRestApiAdapter/settings/base.py 
+  145  python manage.py check
+  146  git stash
+  147  git checkout secondary-with-celery
+  148  python manage.py check
+  149  pip install django-celery-beat
+  150  python manage.py check
+  151  pip install django-cors-headers
+  152  python manage.py check
+  153  pip install rest-auth
+  154  cd ..
+  155  git pull
+  156  cd backend/
+  157  python manage.py check
+  158  mkdir debug
+  159  python manage.py check
+  160  python manage.py migrate
+  161  vim .env 
+  162  sudo -u postgres
+  163  vim KubernetesRestApiAdapter/settings/local.py
+  164  sudo -i -u postgres
+  165  vim .env 
+  166  python manage.py migrate
+  167  history
+  168  ls
+  169  cd cloud/
+  170  ls
+  171  vim tasks.py 
+  172  vim urls.py 
+  173  ls
+  174  cd /var/www
+  175  ls /var
+  176  cd /var
+  177  ls
+  178  mkdir www
+  179  sudo systemctl status redis
+  180  sudo yum install epel-release
+  181  sudo yum update
+  182  sudo yum install redis -y
+  183  sudo systemctl status redis
+  184  sudo systemctl start redis
+  185  sudo systemctl enable redis
+  186  cd /var/www/K
+  187  cd /var/www/
+  188  ls
+  189  cd /opt/
+  190  cd www
+  191  ls
+  192  cd Kubernetes-REST-API-Adapter-v1.1/
+  193  source KubernetesRestApiAdapter-venv/bin/activate
+  194  cd backend/
+  195  python manage.py migrate
+  196  systemctl restart postgresql-12
+  197  python manage.py migrate
+  198  pg_ctl
+  199  sudo -i -u postgres
+  200  python manage.py migrate
+  201  clear
+  202  screen -S django
+  203  sudo yum install -y screen
+  204  screen -S django
+  205  vim KubernetesRestApiAdapter/settings/local.py
+  206  python manage.py createsuperuser
+  207  screen -S celery
+  208  exit
+  209  vi /etc/sysconfig/network-scripts/ifcfg-ens192 
+  210  systemctl restart network
+  211  vim /etc/sysconfig/network-scripts/ifcfg-ens192
+  212  systemctl restart network
+  213  exit
+  214  ip a
+  215  cd /opt/www
+  216  cd Kubernetes-REST-API-Adapter-v1.1/
+  217  git pull
+  218  screen -ls
+  219  screen -r django
+  220  screen -S celery
+  221  screen -ls
+  222  screen -r -d celery
+  223  source KubernetesRestApiAdapter-venv/bin/activate
+  224  cd backend/
+  225* 
+  226  screen -r -d celery
+  227  screen -r django
+  228  sudo firewall-cmd --zone=public --permanent --add-port=8000/tcp
+  229  systemctl restart firewalld
+  230  screen -r -d celery
+  231  cat KubernetesRestApiAdapter/celery.py 
+  232  cat KubernetesRestApiAdapter/__init__.py 
+  233  python manage.py testcelery 4
+  234  cd ..
+  235  git pull
+  236  cd ba
+  237  cd backend/
+  238  python manage.py testcelery 4
+  239  vim KubernetesRestApiAdapter/settings/local.py
+  240  vim KubernetesRestApiAdapter/settings/base.py 
+  241  vim KubernetesRestApiAdapter/settings/local.py
+  242  vim .env 
+  243  python manage.py testcelery 4
+  244  clear
+  245  screen -r -d celery
+  246  python manage.py testcelery 4
+  247  clear
+  248  python manage.py testcelery 4
+  249  screen -r -d celery
+  250  vim cloud/views.py 
+  251  screen -r django
+  252  cat debug/debug.log 
+  253  cat KubernetesRestApiAdapter/settings/local.py
+  254  vim KubernetesRestApiAdapter/settings/local.py
+  255  ls
+  256  cd cloud/
+  257  ls
+  258  vim tasks.py 
+  259  cd /opt/www/Kubernetes-REST-API-Adapter-v1.1/
+  260  git pull
+  261  screen -r django
+  262  screen -r -d celery
+  263  cd backend/
+  264  vim debug/debug.log 
+  265  rm -rf debug/debug.log 
+  266  screen -r -d celery
+  267  python manage.py testcelery 4
+  268  screen -r -d celery
+  269  python manage.py testcelery 4
+  270  screen -r -d celery
+  271  rm -rf debug/debug.log 
+  272  screen -r -d celery
+  273  cd ..
+  274  git stash
+  275  git pull
+  276  screen -r django
+  277  cat debug/debug.log 
+  278  git pull
+  279  screen -r django
+  280  screen -r -d celery
+  281  screen -r django
+  282  git pull
+  283  screen -r django
+  284  git pull
+  285  screen -r django
+  286  screen -r -d celery
+  287  ls debug
+  288  ls backend/debug/
+  289  cat backend/debug/
+  290  cat backend/debug/debug.log 
+  291  screen -r -d celery
+  292  cat backend/debug/debug.log 
+  293  screen -r django
+  294  cat backend/debug/debug.log 
+  295  screen -r -d celery
+  296  cat backend/debug/debug.log 
+  297  screen -r django
+  298  vim backend/KubernetesRestApiAdapter/settings/local.py
+  299  vim KubernetesRestApiAdapter/settings/base.py 
+  300  vim backend/KubernetesRestApiAdapter/settings/base.py 
+  301  git pull
+  302  screen -r django
+  303  screen -r -d celery
+  304  python manage.py testcelery 4
+  305  python /backend/manage.py testcelery 4
+  306  python backend/manage.py testcelery 4
+  307  screen -r -d celery
+  308  screen -r django
+  309  screen -r -d celery
+  310  vi /etc/sysconfig/network-scripts/ifcfg-ens192 
+  311  systemctl restart network
+  312  find / -name www
+  313  cd /var/www
+  314  ls
+  315  cd /opt/wwww
+  316  cd /opt/www
+  317  ls
+  318  cd Kubernetes-REST-API-Adapter-v1.1/
+  319  ls
+  320  cd backend/
+  321  ls
+  322  cd cloud/
+  323  ls
+  324  vim tasks.py 
+  325  clear
+  326  cd /etc/systemd/system
+  327  ls
+  328  vim kuberadapter.service
+  329  ls /opt/var/www
+  330  ls /opt/www
+  331  Kubernetes-REST-API-Adapter-v1.1
+  332  cd /etc/nginx/
+  333  ls
+  334  vim nginx.conf
+  335  ip a
+  336  inet 192.168.28.cd /opt/www/Kubernetes-REST-API-Adapter-v1.1//backend/
+  337  cd /opt/www/Kubernetes-REST-API-Adapter-v1.1//backend/
+  338  gunicorn
+  339  source ../KubernetesRestApiAdapter-venv/bin/activate
+  340  gunicorn
+  341  gunicorn KubernetesRestApiAdapter/
+  342  which python
+  343  /opt/www/Kubernetes-REST-API-Adapter-v1.1/KubernetesRestApiAdapter-venv/bin/python
+  344  cd /etc/systemd/system
+  345  vim kubercloud.service
+  346* 
+  347  systemctl start kubercloud
+  348  journalctl --unit=kubercloud
+  349  systemctl status kubercloud
+  350  /opt/www/Kubernetes-REST-API-Adapter-v1.1/KubernetesRestApiAdapter-venv/bin/gunicorn --access-logfile - --workers 3 --bind unix:/opt/www/Kubernetes-REST-API-Adapter-v1.1/kubercloud.sock KubernetesRestApiAdapter.wsgi:application
+  351  cd /opt/www/Kubernetes-REST-API-Adapter-v1.1/backend/
+  352* 
+  353  /opt/www/Kubernetes-REST-API-Adapter-v1.1/KubernetesRestApiAdapter-venv/bin/gunicorn --access-logfile - --workers 3 --bind unix:/opt/www/Kubernetes-REST-API-Adapter-v1.1/kubercloud.sock KubernetesRestApiAdapter.wsgi:application
+  354  vim /etc/systemd/system/kubercloud.service 
+  355  systemcrl daemon-reload
+  356  systemctl  daemon-reload
+  357  systemctl start kubercloud
+  358  systemctl status  kubercloud
+  359  systemctl stop kubercloud
+  360  systemctl status  kubercloud
+  361  systemctl start  kubercloud
+  362  systemctl status  kubercloud
+  363  cd ..
+  364  ls
+  365  nginx -t
+  366  systemctl restart nginx
+  367  systemctl status nginx
+  368  systemctl status nginx -l
+  369  screen -r django
+  370  systemctl restart nginx
+  371  journalctl --unit= nginx
+  372  journalctl --unit=nginx
+  373  systemctl status nginx -l
+  374  clear
+  375  vim /etc/nginx/nginx.conf
+  376  nginx -t\
+  377  systemctl restart nginx
+  378  systemctl status nginx -l
+  379  screen -r django
+  380  vim /etc/nginx/nginx.conf
+  381  cd backend/
+  382  mkdir static
+  383  systemctl restart nginx
+  384  vim /etc/nginx/nginx.conf
+  385  vim /etc/systemd/system/kubercloud.service 
+  386  systemctl  daemon-reload
+  387  systemctl restart nginx
+  388  systemctl status nginx -l
+  389  sudo nginx start
+  390  vim /etc/nginx/nginx.conf
+  391  systemctl restart nginx
+  392  systemctl status nginx -l
+  393  vim /etc/systemd/system/kubercloud.service 
+  394  systemctl  daemon-reload
+  395  systemctl restart kubercloud
+  396  systemctl status  kubercloud -l
+  397  vim /etc/systemd/system/kubercloud.service 
+  398  systemctl  daemon-reload
+  399  systemctl restart kubercloud
+  400  systemctl status  kubercloud -l
+  401* cp  /etc/systemd/system/celery.service /etc/systemd/system/
+  402  cp /etc/systemd/system/kubercloud.service /etc/systemd/system/celery.service
+  403  vim /etc/systemd/system/celery.service 
+  404  systemctl enable celery
+  405  screen -r -d celery
+  406  systemctl start celery
+  407  systemctl status  celery -l
+  408  cd ..
+  409  git pull
+  410  systemctl restart celery
+  411  systemctl status  celery -l
+  412  ip a
+  413  systemctl status kubercloud
+  414  vim /etc/systemd/system/kubercloud.service 
+  415  systemctl stop kubercloud
+  416  cd backend/
+  417  python manage.py runserver 0.0.0.0:8000
+  418  vim /etc/systemd/system/kubercloud.service 
+  419  systemctl  daemon-reload
+  420  systemctl restart kubercloud
+  421  systemctl stop celery
+  422  screen -S celery
+  423* 
+  424  systemctl  daemon-reload
+  425  systemctl restart celery
+  426  systemctl status  celery -l
+  427  journalsctl --unit kubercloud
+  428  journalctl --unit kubercloud
+  429* 
+  430  systemctl status  nginx
+  431  systemctl start  nginx
+  432  systemctl status  nginx
+  433  sestatus
+  434  vi /etc/selinux/
+  435  vim /etc/selinux/
+  436  vi /etc/selinux/config 
+  437  sudo setenforce 0
+  438  systemctl status  nginx
+  439  systemctl start  nginx
+  440  systemctl status  nginx
+  441  history  | grep screen
+  442  screen --help
+  443  screen -r django
+  444  Screen -S django
+  445* 
+  446  ls
+  447  vim manage.py 
+  448  systemctl status  nginx
+  449  systemctl status  nginx -l
+  450  systemctl stop kubercloud
+  451  vim /etc/nginx/nginx.conf
+  452  systemctl restart nginx
+  453  vim /etc/nginx/nginx.conf
+  454  systemctl restart nginx
+  455  systemctl status nginx
+  456  vim /etc/systemd/system/kubercloud.service 
+  457  cd ..
+  458  ls
+  459  vim /etc/selinux/
+  460  vim /etc/nginx/nginx.conf
+  461  vim /etc/systemd/system/kubercloud.service 
+  462  systemctl  daemon-reload
+  463  systemctl restart kubercloud
+  464  systemctl status kubercloud -l
+  465  ls
+  466  systemctl status kubercloud -l
+  467  journalctl --unit kubercloud
+  468  journalctl --unit kubercloud --since "5 minutes ago"
+  469  journalctl --unit kubercloud --since "5 minutes ago" -l
+  470  journalctl | grep "kubercloud"
+  471  journalctl | grep "kubercloud" --since "1 minutes"
+  472  journalctl | grep "kubercloud" --since "1 minutes ago"
+  473  journalctl | grep "kubercloud" --since "1 minutes ago" -l
+  474  journalctl | grep "kubercloud" | --since "1 minutes ago" -l
+  475  journalctl --unit kubercloud --since "5 minutes ago" -l
+  476  vim /etc/systemd/system/kubercloud.service 
+  477  cd backend/
+  478  gunicorn --bind 0.0.0.0:81 KubernetesRestApiAdapter.wsgi:application
+  479  systemctl  daemon-reload
+  480  systemctl restart kubercloud
+  481  systemctl status kubercloud -l
+  482  vim /etc/nginx/nginx.conf
+  483  systemctl restart nginx
+  484  vim /etc/systemd/system/kubercloud.service 
+  485  systemctl  daemon-reload
+  486  systemctl restart kubercloud
+  487* 
+  488  vim /etc/nginx/nginx.conf
+  489  gunicorn --bind 127.0.0.1:81 KubernetesRestApiAdapter.wsgi:application
+  490  vim /etc/systemd/system/kubercloud.service 
+  491  systemctl  daemon-reload
+  492  systemctl restart kubercloud
+  493  systemctl status kubercloud -l
+  494  vim /etc/nginx/nginx.conf
+  495  systemctl restart nginx
+  496  vim /etc/nginx/nginx.conf
+  497  systemctl restart nginx
+  498  vim /etc/systemd/system/kubercloud.service 
+  499  systemctl  daemon-reload
+  500  systemctl restart kubercloud
+  501  vim /etc/systemd/system/kubercloud.service 
+  502  systemctl  daemon-reload
+  503  systemctl restart kubercloud
+  504  systemctl status kubercloud -l
+  505  history
+  506  vim /etc/systemd/system/kubercloud.service 
+  507  systemctl  daemon-reload
+  508   vim /etc/nginx/nginx.conf
+  509  vim /etc/systemd/system/kubercloud.service 
+  510  cd ..
+  511  git pull
+  512  cd backend/
+  513  python manage.py migrate
+  514  systemctl restart kubercloud
+  515  cd ..
+  516  git pull
+  517  systemctl restart kubercloud
+  518  systemctl restart celery
+  519  journalctl --unit celery --since "5 minutes ago" -l
+  520  journalctl --unit celery --since "5 minutes ago" 
+  521  journalctl --unit kubercloud --since "5 minutes ago" 
+  522  clear
+  523  cat backend/debug/debug.log 
+  524  tail backend/debug/debug.log 
+  525  vim backend/KubernetesRestApiAdapter/settings/local.py
+  526  systemctl stop kubercloud
+  527  rm -rf backend/debug/debug.log 
+  528  systemctl stop celery
+  529  vim /etc/systemd/system/celery.service 
+  530  systemctl restart celery
+  531  systemctl restart kubercloud
+  532  clear
+  533  tail backend/debug/debug.log 
+  534  journalctl --unit kubercloud --since "5 minutes ago" 
+  535  source ../KubernetesRestApiAdapter-venv/bin/activate
+  536  clear
+  537  cd backend/
+  538  python manage.py testlogging Hi
+  539  python manage.py check
+  540  cat backend/debug/debug.log 
+  541* 
+  542  systemctl restart kubercloud
+  543  vim KubernetesRestApiAdapter/settings/local.py
+  544  vim cloud/tasks.py 
+  545  cat debug/debug.log 
+  546  tail debug/debug.log 
+  547  journalctl --unit kubercloud --since "5 minutes ago"  -l
+  548  journalctl --unit kubercloud --since "5 minutes ago"  
+  549  vim KubernetesRestApiAdapter/settings/local.py
+  550  systemctl restart kubercloud
+  551  tail debug/debug.log 
+  552  vim KubernetesRestApiAdapter/settings/local.py
+  553  systemctl restart kubercloud
+  554  cd ..
+  555  git pull
+  556  cd backend/
+  557  python manage.py migrate
+  558  systemctl restart kubercloud
+  559  vim debug/debug.log 
+  560  cd ..
+  561  git pull
+  562  systemctl restart kubercloud
+  563  systemctl restart celery
+  564  vim debug/debug.log 
+  565  tail backend/debug/debug.log 
+  566  git pull
+  567  systemctl restart kubercloud
+  568  tail backend/debug/debug.log 
+  569  cd backend/debug/
+  570  ls
+  571  tail backend/debug/debug.log 
+  572  tail debug/debug.log 
+  573  cat debug.log 
+  574  cd /opt/www
+  575  cd Kubernetes-REST-API-Adapter-v1.1/
+  576  git pull
+  577  systemctl restart kubercloud
+  578  systemctl restart celery
+  579  vim backend/debug/debug.log 
+  580  git pull
+  581  systemctl restart celery
+  582  vim backend/debug/debug.log 
+  583  git pull
+  584  systemctl restart celery
+  585  vim backend/debug/debug.log 
+  586  ls
+  587  cd ba
+  588  cd backend/
+  589  ls
+  590  cd cloud/
+  591  ls
+  592  vim tasks.py 
+  593  ls
+  594  vim views.py 
+  595  cd ..
+  596  git pull
+  597  vim backend/KubernetesRestApiAdapter/settings/local.py
+  598  cd backend/
+  599  python manage.py kubetest 
+  600  pip install kubernetes
+  601  python manage.py kubetest 
+  602  vim 
+  603  python manage.py kubetest 
+  604  clear
+  605  python manage.py kubetest 
+  606  python manage.py kubetest | grep "b15"
+  607  clear
+  608  vim cloud/management/commands/kubetest.py 
+  609  python manage.py kubetest 
+  610  vim cloud/management/commands/kubetest.py 
+  611  python manage.py kubetest 
+  612* 
+  613  python manage.py kubetest 
+  614  cd ..
+  615  git stash
+  616  git pull
+  617  python manage.py kubetest 
+  618  cd backend/
+  619  python manage.py kubetest 
+  620  ls
+  621  cd cloud/
+  622  ls
+  623  cd management/
+  624  ls
+  625  cd commands/
+  626  ls
+  627  vim kubetest.py 
+  628  python manage.py kubetest 
+  629  cd ..
+  630  python manage.py kubetest 
+  631  cd commands/
+  632  ls
+  633  cd cloud/
+  634  ls
+  635  cd management/
+  636  ls
+  637  cd commands/
+  638  ls
+  639* 
+  640  cd ..
+  641  python manage.py kubetest 
+  642  clear
+  643  python manage.py kubetest 
+  644  clear
+  645  cd ..
+  646  git pull
+  647  git stash
+  648  git pull
+  649  python manage.py kubetest --list
+  650  cd backend/
+  651  python manage.py kubetest --list
+  652  python manage.py kubetest --find d-28314b15
+  653  python manage.py kubetest --find 28314b15
+  654  git pull
+  655  cd ..
+  656  git pull
+  657  systemctl restart celery
+  658  systemctl restart kubercloud
+  659  tail backend/debug/debug
+  660  tail backend/debug/debug.log 
+  661  git pull
+  662  systemctl restart kubercloud
+  663  systemctl restart celery
+  664  tail backend/debug/debug.log 
+  665  date
+  666  journalctl --unit kubercloud --since "5 minutes ago"  
+  667* 
+  668  journalctl --unit celery --since "5 minutes ago"  -f
+  669  tail backend/debug/debug.log 
+  670  cd backend/
+  671  python manage.py kubetest --find e8eebb16
+  672  cd ..
+  673  git pull
+  674  systemctl restart celery
+  675  tail backend/debug/debug.log 
+  676  git pull
+  677  systemctl restart celery
+  678  git pull
+  679  systemctl restart celery
+  680  tail backend/debug/debug.log 
+  681  git pull
+  682  systemctl restart celery
+  683  systemctl restart kubercloud
+  684  tail debug/debug.log 
+  685  tail backend/debug/debug.log 
+  686  git pull
+  687  systemctl restart kubercloud
+  688  systemctl restart celery
+  689  tail backend/debug/debug.log 
+  690  systemctl restart celery
+  691  tail debug/debug.log 
+  692  tail backend/debug/debug.log 
+  693  journalctl --unit celery --since "5 minutes ago"  -f
+  694  journalctl --unit kubercloud --since "5 minutes ago"  
+  695  journalctl --unit kubercloud --since "5 minutes ago"   -f
+  696  journalctl --unit kubercloud --since "1 hour ago"   -f
+  697  git pull
+  698  systemctl restart celery
+  699  systemctl restart kubercloud
+  700  tail backend/debug/debug.log 
+  701  git pull
+  702  systemctl restart kubercloud
+  703  systemctl restart celery
+  704  git pull
+  705  systemctl restart celery
+  706  systemctl restart kubercloud
+  707  git pull
+  708  systemctl restart kubercloud
+  709  vim /etc/systemd/system/celery.service 
+  710  systemctl  daemon-reload
+  711  systemctl restart celery
+  712  tail backend/debug/debug.log 
+  713  git pull
+  714  systemctl restart celery
+  715  tail backend/debug/debug.log 
+  716  git pull
+  717  systemctl restart celery
+  718* 
+  719  git pull
+  720  systemctl restart celery
+  721  tail backend/debug/debug.log 
+  722  git pull
+  723  systemctl restart celery
+  724  tail backend/debug/debug.log 
+  725  systemctl restart celery
+  726  tail backend/debug/debug.log 
+  727  yum install ntp
+  728  timedatectl set-timezone Europe/Istanbul
+  729  firewall-cmd add-service=ntp --permanent
+  730  firewall-cmd --add-service=ntp --permanent
+  731  firewall-cmd --reload
+  732  systemctl start ntp
+  733  systemctl start ntpd
+  734  systemctl status ntpd
+  735  systemctl enable ntpd
+  736  ntpdate -q 0.tr.pool.ntp.org 1.tr.pool.ntp.org
+  737  timedatectl set-ntp true
+  738  date
+  739  tail backend/debug/debug.log 
+  740  watch backend/debug/debug.log 
+  741  tail backend/debug/debug.log 
+  742  git pull
+  743  systemctl restart celery
+  744  tail backend/debug/debug.log 
+  745  git pull
+  746  systemctl restart kubercloud
+  747  tail backend/debug/debug.log 
+  748  vim  backend/debug/debug.log 
+  749  git pull
+  750  systemctl restart kubercloud
+  751  systemctl restart celery
+  752  tail backend/debug/debug.log 
+  753  git pull
+  754  systemctl restart celery
+  755  tail backend/debug/debug.log 
+  756  ls
+  757  cd backend/
+  758  ls
+  759  cd cloud/
+  760  ls
+  761  vim tasks.py 
+  762  cd ..
+  763  tail backend/debug/debug.log 
+  764  date
+  765  timectl
+  766  time
+  767  uptime
+  768  time
+  769  date
+  770  git pull
+  771  cd backend/
+  772  python manage.py testlogging Hi
+  773  tail /debug/debug.log 
+  774  tail debug/debug.log 
+  775  clear
+  776  python manage.py testlogging Hi
+  777  tail debug/debug.log 
+  778  date
+  779  tail debug/debug.log 
+  780  date
+  781  tail debug/debug.log 
+  782  ls
+  783  cd cloud
+  784  ls
+  785  cd management/
+  786  ls
+  787  cd commands/
+  788  ls
+  789  vim kubetest.py 
+  790  vim testlogging.py 
+  791  vim testcelery.py 
+  792  cd ..
+  793  ls
+  794  cd ..
+  795  ls
+  796  vim admin.py 
+  797  ls
+  798  cd ..
+  799  ls
+  800  vim manage.py 
+  801  cd KubernetesRestApiAdapter/
+  802  LS
+  803  ls
+  804  cd ..
+  805  tail debug/debug.log 
+  806  systemctl stop kubercloud
+  807  rm -rf debug/debug.log 
+  808  systemctl restart kubercloud
+  809  systemctl restart celery
+  810  tail debug/debug.log 
+  811  date
+  812  cd ..
+  813  git pull
+  814  python manage.py migrate
+  815  cd backend/
+  816  python manage.py migrate
+  817  systemctl restart network
+  818  systemctl restart celery
+  819  systemctl restart kubercloud
+  820  tail debug/debug.log 
+  821  git pull
+  822  systemctl restart celery
+  823  tail debug/debug.log 
+  824  cd..
+  825  cd ..
+  826  git pull
+  827  systemctl restart celery
+  828  systemctl restart kubercloud
+  829  tail /debug/debug.log 
+  830  tail debug/debug.log 
+  831  tail backend/debug/debug.log 
+  832  git pull
+  833  systemctl restart celery
+  834  tail backend/debug/debug.log 
+  835  git pull
+  836  systemctl restart celery
+  837  systemctl restart celery & systemctl restart kubercloud
+  838  systemctl restart celery && systemctl restart kubercloud
+  839  tail backend/debug/debug.log 
+  840  git pull
+  841  systemctl restart celery && systemctl restart kubercloud
+  842  tail backend/debug/debug.log 
+  843  python backend//manage.py migrate
+  844  systemctl restart celery && systemctl restart kubercloud
+  845  tail backend/debug/debug.log 
+  846  tail backend/debug/debug.log |grep called
+  847  vim  backend/debug/debug.log |grep called
+  848  vim  backend/debug/debug.log
+  849  cat backend/debug/debug.log|grep called
+  850  tail  backend/debug/debug.log|grep called
+  851  tail  backend/debug/debug.log
+  852  rm -rf backend/debug/debug.log
+  853  tail  backend/debug/debug.log
+  854  systemctl restart celery && systemctl restart kubercloud
+  855  tail  backend/debug/debug.log
+  856  git pull
+  857  systemctl restart celery && systemctl restart kubercloud
+  858  tail  backend/debug/debug.log
+  859  git pull
+  860  systemctl restart celery && systemctl restart kubercloud
+  861  tail  backend/debug/debug.log
+  862  rm -rf backend/debug/debug.log 
+  863  tail  backend/debug/debug.log
+  864  systemctl restart celery && systemctl restart kubercloud
+  865  tail  backend/debug/debug.log
+  866  journalctl --unit kubercloud --since "1 hour ago"   -f
+  867* 
+  868  systemctl restart celery && systemctl restart kubercloud
+  869  systemctl  daemon-reload
+  870  systemctl restart celery && systemctl restart kubercloud
+  871  journalctl --unit kubercloud --since "1 hour ago"   -f
+  872  tail  backend/debug/debug.log
+  873  systemctl restart celery && systemctl restart kubercloud
+  874  tail  backend/debug/debug.log
+  875  journalctl --unit celery --since "5 minutes ago"  -f
+  876  systemctl stop kubercloud
+  877  systemctl stop celery
+  878  ls backend/debug/
+  879  tail  backend/debug/debug.log
+  880  systemctl restart kubercloud
+  881  systemctl restart celery 
+  882  tail  backend/debug/debug.log
+  883  git pull
+  884  systemctl restart kubercloud && systemctl restart celery
+  885  git pull
+  886  systemctl restart kubercloud && systemctl restart celery
+  887  tail  backend/debug/debug.log
+  888  git pull
+  889  systemctl restart kubercloud && systemctl restart celery
+  890  tail  backend/debug/debug.log
+  891  git pull
+  892  systemctl restart kubercloud && systemctl restart celery
+  893  tail  backend/debug/debug.log
+  894  systemctl restart kubercloud && systemctl restart celery
+  895  git pull
+  896  systemctl restart kubercloud && systemctl restart celery
+  897  tail  backend/debug/debug.log
+  898  git pull
+  899  systemctl restart kubercloud && systemctl restart celery
+  900  tail  backend/debug/debug.log
+  901  git pull
+  902  systemctl restart kubercloud && systemctl restart celery
+  903  tail  backend/debug/debug.log
+  904  git pull
+  905  python backend//manage.py migrate
+  906  systemctl restart kubercloud && systemctl restart celery
+  907  history | grep debug.log
+  908   tail  backend/debug/debug.log
+  909  git pull
+  910  python backend//manage.py migrate
+  911  systemctl restart kubercloud && systemctl restart celery
+  912   tail  backend/debug/debug.log -f
+  913  ls
+  914  find / -name kubercloud
+  915  find / -name kuber
+  916  history
+  917  history > history.txt

@@ -1,0 +1,18 @@
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+# Example for pvc name: p-inyt7890jk
+# Example for pvc label: p-inyt7890jk
+# Example for namespace name/id: n-hyujk678u4
+  name: p-<deployment-id>
+  namespace: n-<namespace-id>
+  labels:
+    app: p-<deployment-id>
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 4Gi
+  storageClassName: silver

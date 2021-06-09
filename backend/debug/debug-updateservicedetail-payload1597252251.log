@@ -1,0 +1,29 @@
+{
+ "subscription": "228",
+ "service": "Ipg",
+ "servers": {
+  "IpgServer": {
+   "cpu": "1",
+   "ram": "600Mi",
+   "disc": "2Gi",
+   "widea_address": "www.kareldeployment.com:32370/d-9d2c8647",
+   "local_ip": "10.233.15.151",
+   "internal_ip": "192.168.28.50:30218",
+   "external_ip": "192.168.28.50:30218",
+   "server_name": "karel-deployment-d-9d2c8647",
+   "server_id": "d-9d2c8647",
+   "state": "1",
+   "fqdn": "www.kareldeployment.com:32370/d-9d2c8647"
+  },
+  "WebcmServer": {
+   "address": "www.kareldeployment.com:32370/d-a0f6cbc4",
+   "local_ip": "10.233.34.222",
+   "internal_ip": "192.168.28.52:32147",
+   "server_name": "karel-deployment-d-a0f6cbc4",
+   "server_id": "d-a0f6cbc4",
+   "server": "10.233.34.222",
+   "state": "1",
+   "fqdn": "www.kareldeployment.com:32370/d-a0f6cbc4"
+  }
+ }
+}

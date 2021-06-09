@@ -1,0 +1,57 @@
+from .base import *  # noqa
+import os
+from decouple import config
+
+
+SECRET_KEY = 'HuwagKangSusuko2020KayaNatinToKapiKaLangKapatid'
+
+DATABASES = {
+    "default": {"ENGINE": "django.db.backends.sqlite3", "NAME": base_dir_join("db.sqlite3"), }
+}
+
+STATIC_URL = '/static/'
+STATIC_ROOT = base_dir_join('static')
+
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+
+# New  Configs
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': True,
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} - {asctime} - {module} - {message}',
+            'style': '{',
+        },
+        'simple': {
+            'format': '{levelname} - {asctime} - {message}',
+            'style': '{',
+        },
+    },
+    'handlers': {
+        'console': {
+            'level': 'INFO',
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple'
+        },
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': base_dir_join('debug', 'debug.log'),
+            'formatter': 'verbose'
+        },
+    },
+    'loggers': {
+        '': {
+            'handlers': ['console'],
+            'level': 'DEBUG'
+        },
+        'cloud': {
+            'handlers': ['file'],
+            'level': 'DEBUG'
+        }
+    }
+}
+
+
